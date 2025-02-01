@@ -70,7 +70,7 @@ The application includes global exception handling to return meaningful error me
    mvn spring-boot:run
    ```
    
-   Alternatively:
+ Alternatively:
   ```bash
   # Download the project as a ZIP file and extract it
   # Navigate to the extracted folder and open the terminal
@@ -86,7 +86,7 @@ The application includes global exception handling to return meaningful error me
 
 Explore the API documentation through Swagger at `http://localhost:8080/swagger-ui/index.html`.
 
-
+![image](https://github.com/user-attachments/assets/45e0ab92-8d5a-4042-9fb6-1909742f7e45)
 
 Swagger UI Screenshot
 
