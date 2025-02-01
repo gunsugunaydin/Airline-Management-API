@@ -16,7 +16,9 @@ The Airline Management API is a backend application designed to manage airplanes
   - Notifications are sent when a reservation is made, flight details change, or a user's email address is updated.  
   - @Async is used for non-blocking email notifications.
   - JavaMailSender and Thymeleaf are used for HTML email templates.
-   ![image](https://github.com/user-attachments/assets/8a3b88d9-ff15-4ea7-9445-b0f689d99cd8)
+
+![image](https://github.com/user-attachments/assets/b3a49760-98f1-4c85-8f66-5680b04965f1)
+
       
 
 - **Global Exception Handling:** Ensures proper error management with meaningful error messages.    
