@@ -16,7 +16,10 @@ The Airline Management API is a backend application designed to manage airplanes
   - Notifications are sent when a reservation is made, flight details change, or a user's email address is updated.  
   - @Async is used for non-blocking email notifications.
   - JavaMailSender and Thymeleaf are used for HTML email templates.
-- **Global Exception Handling:** Ensures proper error management with meaningful error messages.
+    ![Confirmation Email Screenshot](https://github.com/user-attachments/assets/1263774b-7d5c-4846-8c3f-74fe34eef1f2)        
+
+- **Global Exception Handling:** Ensures proper error management with meaningful error messages.    ![Flight Change Email Screenshot](https://github.com/user-attachments/assets/446c77a1-cbc6-424c-8d3d-9736c0509954)
+
 - **Filtering & Booking:**
   - Users can filter flights by departure location, arrival location, departure date, and arrival date.  
   - @JsonIgnore is used in entity relationships to avoid infinite loops during serialization. Without it, filtering would cause an infinite loop.
