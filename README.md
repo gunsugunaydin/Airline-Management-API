@@ -20,14 +20,22 @@ The Airline Management System is a backend application designed to efficiently m
 - **Global Error Handling**: Custom error messages for specific failure scenarios, such as unavailable airplanes or fully booked flights.
 - **Email Templates**: Template-based email notifications via JavaMailSender and Thymeleaf.
 
+<p align="center">
+  <img src="https://github.com/gunsugunaydin/your-repository/raw/main/path/to/screenshot1.png" width="400" />
+  <img src="![Flight Change Email Screenshot](https://github.com/user-attachments/assets/522f966d-65e9-4d76-94cd-068fbf65f866)
+" width="400" />
+</p>
+
+
 ## Exception Handling
 
-The application features global exception handling for a smooth user experience. Key exceptions include:
+The application features global exception handling for a smooth user experience. Some exceptions include:
 
 - `AirplaneNotAvailableException`: Thrown when an airplane is unavailable.
 - `FlightFullyBookedException`: Raised when a flight is fully booked.
-- `ReservationAlreadyExistsException`: Triggered if a reservation already exists.
 - `InvalidFlightTimeException`: Raised when a flight’s departure time is after the arrival time.
+
+You can check out more by installing my code.
 
 ## Technologies Used
 
