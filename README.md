@@ -21,8 +21,8 @@ The Airline Management System is a backend application designed to efficiently m
 - **Email Templates**: Template-based email notifications via JavaMailSender and Thymeleaf.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b1e4f72a-79c3-4240-a1c1-094808935de1" width="400" />
-  <img src="https://github.com/user-attachments/assets/522f966d-65e9-4d76-94cd-068fbf65f866" width="400" />
+  <img src="https://github.com/user-attachments/assets/b1e4f72a-79c3-4240-a1c1-094808935de1" width="300" />
+  <img src="https://github.com/user-attachments/assets/522f966d-65e9-4d76-94cd-068fbf65f866" width="300" />
 </p>
 
 ## Exception Handling
