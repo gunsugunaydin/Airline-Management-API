@@ -1,56 +1,44 @@
-# Airline Management API
+# Airline Management System
 
-## Overview
+## Project Overview
 
-The Airline Management API is a backend application designed to manage airplanes, flights, and passenger reservations for an airline company. Built using Spring Boot, it provides a set of RESTful APIs to handle operations such as flight scheduling, airplane assignment, and passenger bookings. The system ensures efficient management by incorporating robust validation, exception handling, and email notifications.
+The Airline Management System is a backend application designed to efficiently manage airline operations, including airplanes, flights, and passenger reservations. Developed using Spring Boot, the application exposes RESTful API endpoints to handle key functionalities such as flight management, airplane assignments, and reservation handling.
 
-## Features
+## Key Features
 
-- **Airplane Management:** Create, update, retrieve, and delete airplane data.
-- **Flight Management:** Manage flights and their association with airplanes.
-- **Reservation System:** Book and manage passenger reservations.
-- **Cascade Effect:**
-  - An airplane can be used for multiple flights, and each flight is assigned to an airplane.
-  - A flight can have multiple reservations, and each reservation is linked to a flight.
-- **Email Notifications:**
-  - Notifications are sent when a reservation is made, flight details change, or a user's email address is updated.  
-  - @Async is used for non-blocking email notifications.
-  - JavaMailSender and Thymeleaf are used for HTML email templates.
+- **Airplane & Flight Management**: Seamlessly manage airplanes, flights, and associated reservations.
+- **Relational Data Handling**:
+  - Airplanes can be assigned by multiple flights.
+  - Each flight is associated with an airplane.
+  - Reservations are linked to specific flights.
+- **Flight Search & Filtering**: Users can filter flights by departure location, arrival location, and date range.
+- **Occupancy & Availability Checks**: Prevent reservations on fully booked flights and verify airplane availability before flight assignment.
+- **Unique Reservation Codes**: Automatically generate unique reservation codes that remain unchanged even after updates.
+- **Email Notifications**: Automated email notifications for reservation creation, flight updates, and email address changes.
+- **Asynchronous Processing**: Non-blocking operations using the `@Async` annotation for background tasks.
+- **DTO & Mapper Usage**: Efficient entity-to-DTO mapping via dedicated mappers (e.g., `FlightMapper`, `ReservationMapper`, `AirplaneMapper`).
+- **Global Error Handling**: Custom error messages for specific failure scenarios, such as unavailable airplanes or fully booked flights.
+- **Email Templates**: Template-based email notifications via JavaMailSender and Thymeleaf.
 
-      ![Frame 101 (3)](https://github.com/user-attachments/assets/8100574c-9ccc-4228-84ae-6c418140d451)
+## Exception Handling
 
-- **Global Exception Handling:** Ensures proper error management with meaningful error messages.    
+The application features global exception handling for a smooth user experience. Key exceptions include:
 
-- **Filtering & Booking:**
-  - Users can filter flights by departure location, arrival location, departure date, and arrival date.  
-  - @JsonIgnore is used in entity relationships to avoid infinite loops during serialization. Without it, filtering would cause an infinite loop.
-  - The system verifies the capacity of the flight before booking.
-- **Airplane Availability Check:** Ensures an airplane is available before assigning it to a flight.
-- **Unique Reservation Code:**
-  - Each reservation has a unique code that remains unchanged even if the flight or email is updated.
-- **PATCH Method Handling:**
-  - `@RequestPart` with `MediaType.MULTIPART_FORM_DATA_VALUE` is used for PATCH methods, requiring parameters as strings. These values are parsed in the service layer.
-- **Seeding Data:**
-  - Sample data is provided, including test cases for various failure scenarios.
+- `AirplaneNotAvailableException`: Thrown when an airplane is unavailable.
+- `FlightFullyBookedException`: Raised when a flight is fully booked.
+- `ReservationAlreadyExistsException`: Triggered if a reservation already exists.
+- `InvalidFlightTimeException`: Raised when a flight’s departure time is after the arrival time.
 
 ## Technologies Used
 
-- **Backend:** Spring Boot, Java
-- **Frontend (for Email Templates):** Thymeleaf, HTML, CSS
-- **Database:** H2 (In-memory)
-- **ORM:** JPA & Hibernate
-- **Email Notifications:** Java Mail API
-- **Security:** Spring Security (all endpoints permitted)
-- **Documentation:** Swagger
-
-## Error Handling
-
-The application includes global exception handling to return meaningful error messages. Some custom exceptions include:
-
-- **AirplaneNotAvailableException:** Triggered when an airplane is unavailable.
-- **FlightFullyBookedException:** Raised when a flight reaches full capacity.
-- **ReservationAlreadyExistsException:** Raised if a duplicate reservation is attempted.
-- **InvalidFlightTimeException:** Thrown if the departure time is after the arrival time.
+- **Backend**: Spring Boot, Java
+- **Email Templates**: Thymeleaf, HTML, CSS
+- **Database Operations**: JPA Criteria API, Hibernate
+- **Email Notifications**: Java Mail API
+- **API Documentation & Testing**: Swagger
+- **Database**: H2 (in-memory)
+- **Security**: Spring Security (open for all endpoints)
+- **Other**: Asynchronous processing with `@Async`, Reflection API for dynamic operations
 
 ## Prerequisites
 
@@ -59,6 +47,7 @@ The application includes global exception handling to return meaningful error me
 
 ## Configuration & Setup
 
+If you would like to install from my private repository:
 1. Clone the repository:
    ```sh
    git clone https://github.com/gunsugunaydin/Airline-Management-API.git
@@ -98,34 +87,31 @@ Swagger UI Screenshot
 
 ### Airplane API
 
-- **GET** `/airplanes/` - Retrieve all airplanes.
-- **GET** `/airplanes/{id}` - Retrieve details of a specific airplane.
-- **GET** `/airplanes/{id}/flights` - Retrieve flights operated by a specific airplane.
-- **POST** `/airplanes/` - Add a new airplane.
-- **PATCH** `/airplanes/{id}` - Update an airplane.
-- **DELETE** `/airplanes/{id}` - Remove an airplane.
+- `GET /airplanes`: Retrieve all airplanes
+- `GET /airplanes/{id}`: Retrieve details of a specific airplane
+- `POST /airplanes`: Add a new airplane
+- `PATCH /airplanes/{id}`: Update an airplane
+- `DELETE /airplanes/{id}`: Delete an airplane
 
 ### Flight API
 
-- **GET** `/flights/` - Retrieve all flights.
-- **GET** `/flights/{id}` - Retrieve details of a specific flight.
-- **GET** `/flights/{id}/reservations` - Retrieve reservations for a specific flight.
-- **POST** `/flights/` - Add a new flight.
-- **POST** `/flights/filter` - Search for flights.
-- **PATCH** `/flights/{id}` - Update a flight.
-- **DELETE** `/flights/{id}` - Remove a flight.
+- `GET /flights`: Retrieve all flights
+- `GET /flights/{id}`: Retrieve details of a specific flight
+- `POST /flights`: Add a new flight
+- `POST /flights/filter`: Search for flights based on parameters
+- `PATCH /flights/{id}`: Update a flight
+- `DELETE /flights/{id}`: Delete a flight
 
 ### Reservation API
 
-- **GET** `/reservations/` - Retrieve all reservations.
-- **GET** `/reservations/{id}` - Retrieve details of a specific reservation.
-- **POST** `/reservations/` - Create a new reservation.
-- **PATCH** `/reservations/{id}` - Update a reservation.
+- `GET /reservations`: Retrieve all reservations
+- `GET /reservations/{id}`: Retrieve details of a specific reservation
+- `POST /reservations`: Create a new reservation
+- `PATCH /reservations/{id}`: Update a reservation
+
 
 ## Contact
 Please feel free to explore the code and share your feedback. I am always open to suggestions.
-
-<img src="https://media.tenor.com/v63_brUy45wAAAAi/peach-goma-love-peach-cat.gif" alt="Get in Touch Gif" width="50" height="50"> Get in Touch:
 
 - **Email**: [gunsugunay98@gmail.com](mailto:gunsugunay98@gmail.com)
 - **LinkedIn**: [linkedin.com/in/gunsugunaydin](https://www.linkedin.com/in/gunsugunaydin/)
