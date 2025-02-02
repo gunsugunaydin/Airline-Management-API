@@ -22,7 +22,7 @@ The Airline Management System is a backend application designed to efficiently m
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b1e4f72a-79c3-4240-a1c1-094808935de1" width="280" />
-  <img src="https://github.com/user-attachments/assets/522f966d-65e9-4d76-94cd-068fbf65f866" width="278" />
+  <img src="https://github.com/user-attachments/assets/522f966d-65e9-4d76-94cd-068fbf65f866" width="279" />
 </p>
 
 ## Exception Handling
