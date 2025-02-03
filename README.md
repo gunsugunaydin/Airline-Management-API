@@ -115,6 +115,13 @@ Swagger UI Screenshot
 - `POST /reservations`: Create a new reservation
 - `PATCH /reservations/{id}`: Update a reservation
 
+### Future Enhancements
+
+- **Integration and Unit Tests**: The implementation of integration and unit tests could enhance the reliability of the application.
+
+- **Message Translation**: For better internationalization support, application messages can be moved to a translation file, making it easier to adapt the project for different languages.
+
+- **Docker Packaging**: While it may not be essential for this project, using Docker to package the application can be beneficial in more complex environments. This would allow for easier deployment and portability across different systems.(I will consider learning it when the need arises 🚀)
 
 ## Contact
 Please feel free to explore the code and share your feedback. I am always open to suggestions.
