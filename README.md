@@ -78,6 +78,8 @@ If you would like to install from my private repository:
   # After opening the project, follow the steps below:
   mvn clean install
   mvn spring-boot:run
+
+  # Or just open and click "Run" with Java
   ```
 ---
 
