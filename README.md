@@ -123,10 +123,10 @@ Swagger UI Screenshot
 
 - **Message Translation**: For better internationalization support, application messages can be moved to a translation file, making it easier to adapt the project for different languages.
 
-- **Docker Packaging**: While it may not be essential for this project, using Docker to package the application can be beneficial in more complex environments. This would allow for easier deployment and portability across different systems.(I will consider learning it when the need arises 🚀)
-
 ## Contact
 Please feel free to explore the code and share your feedback. I am always open to suggestions.
+
+<img src="https://kawaiihoshi.com/wp-content/uploads/2023/07/1-peach-goma-animations.gif" alt="Get in Touch Gif" width="50" height="50"> Get in Touch:
 
 - **Email**: [gunsugunay98@gmail.com](mailto:gunsugunay98@gmail.com)
 - **LinkedIn**: [linkedin.com/in/gunsugunaydin](https://www.linkedin.com/in/gunsugunaydin/)
