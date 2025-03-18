@@ -68,19 +68,16 @@ You can check out more by installing my code.
    ```sh
    mvn spring-boot:run
    ```
-   
- Alternatively:
-  ```bash
-  # Download the project as a ZIP file and extract it
-  # Navigate to the extracted folder and open the terminal
-  code .
-  
-  # After opening the project, follow the steps below:
-  mvn clean install
-  mvn spring-boot:run
-
-  # Or just open and click "Run" with Java
-  ```
+4. Alternatively:  
+   ```bash
+    # Download the project as a ZIP file and extract it
+    # Navigate to the extracted folder and open the terminal
+    code .
+    
+    # After opening the project, follow the steps below:
+    mvn clean install
+    mvn spring-boot:run
+    ```
 
 ## Usage and API Documentation
 
