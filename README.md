@@ -53,19 +53,36 @@ You can check out more by installing my code.
 
 ## Configuration & Setup
 
-  # 1. Clone the repository
-  git clone https://github.com/gunsugunaydin/Airline-Management-API.git
-  cd airline-management-api
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/gunsugunaydin/Airline-Management-API.git
+   cd airline-management-api
+   ```
+2. Configure mail credentials in `secret.properties`:
+   ```properties
+   mail.username=your_email@example.com
+   mail.password=your_password
+   ```
+   Watch the video below to learn how to obtain email credentials:  
+   https://youtu.be/Zi2IrgdDhnQ?si=PtkKChAueCmYKmXL  
+3. Run the application:
+   ```sh
+   mvn spring-boot:run
+   ```
+   
+ Alternatively:
+  ```bash
+  # Download the project as a ZIP file and extract it
+  # Navigate to the extracted folder and open the terminal
+  code .
   
-  # 2. Configure mail credentials in secret.properties
-  echo "mail.username=your_email@example.com" >> secret.properties
-  echo "mail.password=your_password" >> secret.properties
-  
-  # Learn how to obtain email credentials:
-  # https://youtu.be/Zi2IrgdDhnQ?si=PtkKChAueCmYKmXL  
-  
-  # 3. Run the application
+  # After opening the project, follow the steps below:
+  mvn clean install
   mvn spring-boot:run
+
+  # Or just open and click "Run" with Java
+  ```
+---
 
    
  Alternatively:
