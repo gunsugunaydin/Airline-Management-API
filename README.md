@@ -1,4 +1,4 @@
-# Airline Management System <img src="https://media.tenor.com/QYEm7gBzkLQAAAAj/bubble-kittea-cute.gif" alt="Get in Touch Gif" width="50" height="50">
+# Airline Management System <img src="https://custom-doodle.com/wp-content/uploads/doodle/pusheen-the-cat-flying-the-plane/pusheen-the-cat-flying-the-plane-doodle.gif" alt="Get in Touch Gif" width="50" height="50">
 
 ## Project Overview
 
@@ -126,7 +126,7 @@ Swagger UI Screenshot
 ## Contact
 Please feel free to explore the code and share your feedback. I am always open to suggestions.
 
-<img src="https://custom-doodle.com/wp-content/uploads/doodle/pusheen-the-cat-flying-the-plane/pusheen-the-cat-flying-the-plane-doodle.gif" alt="Get in Touch Gif" width="50" height="50"> Get in Touch:
+<img src="https://media.tenor.com/QYEm7gBzkLQAAAAj/bubble-kittea-cute.gif" alt="Get in Touch Gif" width="50" height="50"> Get in Touch:
 
 - **Email**: [gunsugunay98@gmail.com](mailto:gunsugunay98@gmail.com)
 - **LinkedIn**: [linkedin.com/in/gunsugunaydin](https://www.linkedin.com/in/gunsugunaydin/)
