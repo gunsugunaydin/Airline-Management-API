@@ -59,7 +59,7 @@ If you would like to install from my private repository:
    git clone https://github.com/gunsugunaydin/Airline-Management-API.git
    cd airline-management-api
    ```
-2. Configure mail credentials in `secret.properties` or use mine 🫠:
+2. Configure mail credentials in `secret.properties`:
    ```properties
    mail.username=your_email@example.com
    mail.password=your_password
