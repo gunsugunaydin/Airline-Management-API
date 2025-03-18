@@ -63,8 +63,7 @@ You can check out more by installing my code.
    mail.username=your_email@example.com
    mail.password=your_password
    ```
-   Watch the video below to learn how to obtain email credentials:  
-   https://youtu.be/Zi2IrgdDhnQ?si=PtkKChAueCmYKmXL  
+   Learn how to obtain email credentials here: https://youtu.be/Zi2IrgdDhnQ?si=PtkKChAueCmYKmXL
 3. Run the application:
    ```sh
    mvn spring-boot:run
