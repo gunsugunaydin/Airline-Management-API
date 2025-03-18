@@ -64,6 +64,8 @@ If you would like to install from my private repository:
    mail.username=your_email@example.com
    mail.password=your_password
    ```
+   # Watch the video below to learn how to obtain email credentials:  
+   # https://youtu.be/Zi2IrgdDhnQ?si=PtkKChAueCmYKmXL  
 3. Run the application:
    ```sh
    mvn spring-boot:run
